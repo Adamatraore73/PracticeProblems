@@ -1,0 +1,161 @@
+Methods:
+	- Others:
+		.collect
+		.map
+		1.45.floor (round down to nearest integer)
+		.is_a? Integer
+		.select
+
+	- String Methods: 
+		.reverse, .length, .upcase, .downcase, capitalize!, .include? " ", .gsub!(/string1, "replace string1 with me"), .split(",") #returns array
+
+Loops:
+	95.upto(100) { |num| puts num}
+
+	10.times { print " " } # prints block 10 times
+	
+	while <boolean expression>
+		puts " "
+	end 
+
+	until <boolean exp>
+		puts " "
+	end
+
+	for num in 1...10    #prints 1,2..9
+		puts num  		 # if you want 10 include then use 2 dots like: 1..10
+	end
+
+	loop do
+		puts " "
+		break if <boolean expression>
+	end
+
+Array:
+	my_array = [1,2,3,-1,0]
+	puts my_array[0] #displays first element in my_array
+
+	Iterating through items in an array:
+		my_array = [1, 2, 3]
+		my_array.each { |item| iteam += 1 puts item }
+
+	my_array.sort! # sorts items in my_array from smallest to biggest
+
+	#Multi-dimentioanl array:
+		my_array[row][column]
+
+Hash (key-values pair):
+	# Below hash uses strings as key
+	my_hash = {
+		"Damus" => 510, 
+		"Bouya" => 415
+	}
+	puts my_hash["Damus"] # displays the value 510
+
+	#It is better to use Symbols as key
+	my_hash = {
+		Damus: 510, 
+		Bouya: 415
+	}
+
+	#Another way to create a new hash:
+	my_hash = Hash.new # empty hash
+
+	# We can create an empty hash with values initialized
+	my_hash = Hash.new(0) # all values initialized to 0
+
+	Iterating through a hash:
+		my_hash.each { |key, value| puts "#{key} : #{value}" }
+
+
+
+Data Types (3):
+	- Numbers. Ex: 1, -1, 100, 99
+	- Boolean. Ex: true, false
+	- String. Ex: " ", "a", "hello", "!", "2"
+
+
+
+Math Symbols:
+	*, ** (power), /, +, -, %(modulo)
+
+
+More things:
+	puts " "
+	print " "
+	"#{variable_name}" 
+	num = num + 1 is same as num += 1
+
+Gets user input:
+	variable_name = gets.chomp  (gets user input as a string)
+	variable_name = Integer(gets.chomp)  (gets only integers)
+
+Comments:
+	=begin
+	=end
+
+	#this is a online-comment
+
+if-statements:
+	if <boolean expression>
+		print " "
+	elsif <another boolean expression>
+		print " "
+	else
+		print " "
+	end
+
+unless-statements:
+	unless <boolean expression>
+		print " "
+	else
+		print " "
+	end 
+
+Boolean operators: &&(and), || (or), !(not), <, >, <=, >=, == (boolean comparator)
+
+Combined comparison operator:
+	"A" <=> "B" ("A" is less than "B")
+		returns: 1 if "A" > "B" , 0 if "A" == "B", -1 if "A" < "B"
+
+
+Methods:
+	def method_name(arg1, arg2, *splat_args)
+		#logic
+		#more logic
+	end
+
+	*splat_args: mean the method can have more than one args there.
+
+
+
+
+Blocks:
+	my_arr.each { |x| x**2 }
+	my_arr.each do |x| x**2 end
+
+Procs: 
+	- Syntax: cube = Proc.new {|x| x ** 3 }
+			   [1,2,3].collect!(&cube)
+
+Lambda: 
+	my_lambda = lambda { |item| item.is_a? Integer }
+	my_variable = my_arr.select(&my_lambda) # loops over my_arr and only selects integers
+
+				OBJECT ORIENTED STUFF
+
+Class: 
+
+	class MyClassName
+		def initialize(my_var1, my_var2) #this gets called when we try to create an instance of our class
+			@my_var1 = my_var1
+			@my_var2 = my_var2 
+		end
+	end
+
+	#Creating an instance
+	my_instance = MyClassName.new(var1, var2)
+
+
+
+
