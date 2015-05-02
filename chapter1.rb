@@ -40,7 +40,7 @@ def removeDuplicate(str)
             if(str[i] == str[j])
                 str = str[0..(j-1)] + str[(j+1), str.length]
             end
-        end
+        end     
     end
     str
 end
@@ -58,10 +58,19 @@ def anagrams(str1 , str2)
     return false
 end
 
-#1.5
+
+#1.5 Write a method to replace all spaces in a string with ‘%20’.
+def replaceSpaces(str) 
+    if(str.include? " ")
+        str = str.gsub!(" ", "%20")
+    end
+end
 
 #1.8
 
+
+
+#puts replaceSpaces(" fgh ")
 #puts anagrams("iceman", "cinema")
 #puts removeDuplicate("hello")
 #hasAllUniqueChars("123451")
